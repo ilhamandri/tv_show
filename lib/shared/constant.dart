@@ -6,5 +6,5 @@ class Constant {
   static const String nowPlayingMovies = '/nowPlayingMovies';
   static const String topRatedTVShows = '/topRatedTVShows';
   static const String popularTVShows = '/popularTVShows';
-  static const String onAirTVSHOWS = '/onAirTVSHOWS';
+  static const String onAirTVShows = '/onAirTVShows';
 }

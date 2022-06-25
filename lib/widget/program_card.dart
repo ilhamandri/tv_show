@@ -13,7 +13,7 @@ class ProgramCard extends StatelessWidget {
       child: InkWell(
         onTap: () => Get.toNamed(path!),
         child: Container(
-          padding: const EdgeInsets.all(30),
+          padding: const EdgeInsets.all(25),
           width: 130,
           height: 130,
           child: Column(
