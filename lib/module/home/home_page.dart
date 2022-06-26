@@ -26,14 +26,15 @@ class HomePage extends GetView<HomePageController> {
               shrinkWrap: true,
               crossAxisCount: 3,
               children: [
-                ProgramCard(path: Constant.topRatedMovies, icon: Icons.star_outline, title: 'Top Rated Movie'),
+                ProgramCard(path: Constant.topRatedMovies, icon: Icons.star_border, title: 'Top Rated Movie'),
                 ProgramCard(path: Constant.popularMovies, icon: Icons.movie_creation_outlined, title: 'Popular Movie'),
                 ProgramCard(
                   path: Constant.nowPlayingMovies,
                   icon: Icons.play_arrow_outlined,
                   title: 'Now Playing Movie',
                 ),
-                ProgramCard(path: Constant.topRatedTVShows, icon: Icons.star_outline, title: 'Top Rated TV Show'),
+                ProgramCard(
+                    path: Constant.topRatedTVShows, icon: Icons.thumb_up_alt_outlined, title: 'Top Rated TV Show'),
                 ProgramCard(path: Constant.popularTVShows, icon: Icons.tv, title: 'Popular TV Show'),
                 ProgramCard(path: Constant.onAirTVShows, icon: Icons.live_tv, title: 'On Air TV Show'),
               ],
