@@ -1,6 +1,10 @@
-# tv_shows_app
+# How to use tv_shows_app
 
-A new Flutter project.
+- Install aplikasi melalui APK yang sudah disediakan
+- Tunggu sampai penginstalan selesai
+- Anda dapat memilih program sesuai dengan ketertarikan anda
+- Anda dapat memasukkan film atau tv show ke dalam watch list dengan button "Save"
+- Daftar tontonan dapat diakses melalui button "See My Watch List" pada halaman home
 
 ## Getting Started
 
