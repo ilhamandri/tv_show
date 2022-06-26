@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tv_shows_app/module/watch_list/watch_list_controller.dart';
 import 'package:tv_shows_app/shared/models/movie_model.dart';
 
 class MovieListTile extends StatelessWidget {
@@ -58,7 +59,15 @@ class MovieListTile extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
+              IconButton(
+                onPressed: () {
+                  var watchController = Get.find<WatchListController>();
+                  watchController.watchList.add(movieModel!);
+                  Get.rawSnackbar(message: 'Added to Watch list');
+                },
+                icon: Icon(Icons.add, color: Colors.green[900], size: 20),
+              ),
             ],
           ),
         ),

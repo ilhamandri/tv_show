@@ -13,6 +13,8 @@ import 'package:tv_shows_app/module/top_rated_movies/top_rated_movies_controller
 import 'package:tv_shows_app/module/top_rated_movies/top_rated_movies_page.dart';
 import 'package:tv_shows_app/module/top_rated_tv_show/top_rated_tv_show_controller.dart';
 import 'package:tv_shows_app/module/top_rated_tv_show/top_rated_tv_show_page.dart';
+import 'package:tv_shows_app/module/watch_list/watch_list_page.dart';
+import 'package:tv_shows_app/module/watch_list/watch_list_controller.dart';
 import 'package:tv_shows_app/shared/constant.dart';
 
 class RoutePage {
@@ -20,7 +22,10 @@ class RoutePage {
     GetPage(
       name: Constant.homePage,
       page: () => HomePage(),
-      binding: BindingsBuilder(() => Get.put<HomePageController>(HomePageController())),
+      binding: BindingsBuilder(() {
+        Get.put<HomePageController>(HomePageController());
+        Get.put<WatchListController>(WatchListController());
+      }),
     ),
     GetPage(
       name: Constant.topRatedMovies,
@@ -51,6 +56,10 @@ class RoutePage {
       name: Constant.onAirTVShows,
       page: () => OnAirTVShowPage(),
       binding: BindingsBuilder(() => Get.put<OnAirTVShowController>(OnAirTVShowController())),
+    ),
+    GetPage(
+      name: Constant.watchList,
+      page: () => WatchListPage(),
     ),
   ];
 }

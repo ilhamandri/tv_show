@@ -7,4 +7,5 @@ class Constant {
   static const String topRatedTVShows = '/topRatedTVShows';
   static const String popularTVShows = '/popularTVShows';
   static const String onAirTVShows = '/onAirTVShows';
+  static String watchList = '/watchList';
 }

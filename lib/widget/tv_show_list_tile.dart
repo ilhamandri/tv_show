@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tv_shows_app/module/watch_list/watch_list_controller.dart';
 import 'package:tv_shows_app/shared/models/movie_model.dart';
 import 'package:tv_shows_app/shared/models/tv_show_model.dart';
 
@@ -26,7 +27,7 @@ class TVShowListTile extends StatelessWidget {
               ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(8)),
                 child: CachedNetworkImage(
-                  imageUrl: 'https://image.tmdb.org/t/p/w500/${tv_show_model!.poster_path!}',
+                  imageUrl: 'https://image.tmdb.org/t/p/w500/${tv_show_model!.backdrop_path!}',
                   fit: BoxFit.fill,
                   height: 50,
                   width: 50,
@@ -40,7 +41,7 @@ class TVShowListTile extends StatelessWidget {
                   children: [
                     Flexible(
                       child: Text(
-                        tv_show_model!.original_name!,
+                        tv_show_model!.title!,
                         style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
                       ),
                     ),
@@ -56,10 +57,18 @@ class TVShowListTile extends StatelessWidget {
                           color: Colors.orange[300],
                         )
                       ],
-                    )
+                    ),
                   ],
                 ),
-              )
+              ),
+              IconButton(
+                onPressed: () {
+                  var watchController = Get.find<WatchListController>();
+                  watchController.watchList.add(tv_show_model!);
+                  Get.rawSnackbar(message: 'Added to Watch list');
+                },
+                icon: Icon(Icons.add, color: Colors.green[900], size: 20),
+              ),
             ],
           ),
         ),
