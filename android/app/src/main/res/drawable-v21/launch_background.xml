@@ -7,6 +7,6 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@mipmap/movies_launcher" />
+            android:src="@drawable/movies_launcher" />
     </item>
 </layer-list>
