@@ -10,6 +10,7 @@ class WatchListPage extends GetView<WatchListController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff27AE60),
         title: const Text('My Watch List'),
       ),
       body: ListView.builder(

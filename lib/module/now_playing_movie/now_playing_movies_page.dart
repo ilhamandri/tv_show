@@ -12,6 +12,7 @@ class NowPlayingMoviesPage extends GetView<NowPlayingMoviesController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff27AE60),
         title: const Text('Now Playing Movies'),
       ),
       body: Padding(

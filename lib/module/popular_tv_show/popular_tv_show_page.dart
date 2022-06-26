@@ -12,6 +12,7 @@ class PopularTVShowPage extends GetView<PopularTVShowController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff27AE60),
         title: const Text('Popular TV Show'),
       ),
       body: Padding(

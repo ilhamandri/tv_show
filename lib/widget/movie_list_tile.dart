@@ -60,14 +60,19 @@ class MovieListTile extends StatelessWidget {
                   ],
                 ),
               ),
-              IconButton(
-                onPressed: () {
-                  var watchController = Get.find<WatchListController>();
-                  watchController.watchList.add(movieModel!);
-                  Get.rawSnackbar(message: 'Added to Watch list');
-                },
-                icon: Icon(Icons.add, color: Colors.green[900], size: 20),
-              ),
+              TextButton(
+                  onPressed: () {
+                    var watchController = Get.find<WatchListController>();
+                    watchController.watchList.add(movieModel!);
+                    Get.rawSnackbar(message: 'Added to Watch list');
+                  },
+                  child: SizedBox(
+                      width: 50,
+                      child: Text(
+                        'Save',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.green[900]),
+                      ))),
             ],
           ),
         ),

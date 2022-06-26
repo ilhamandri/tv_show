@@ -61,13 +61,20 @@ class TVShowListTile extends StatelessWidget {
                   ],
                 ),
               ),
-              IconButton(
+              TextButton(
                 onPressed: () {
                   var watchController = Get.find<WatchListController>();
                   watchController.watchList.add(tv_show_model!);
                   Get.rawSnackbar(message: 'Added to Watch list');
                 },
-                icon: Icon(Icons.add, color: Colors.green[900], size: 20),
+                child: SizedBox(
+                  width: 50,
+                  child: Text(
+                    'Save',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.green[900]),
+                  ),
+                ),
               ),
             ],
           ),

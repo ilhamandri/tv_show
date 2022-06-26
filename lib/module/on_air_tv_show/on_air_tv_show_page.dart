@@ -11,6 +11,7 @@ class OnAirTVShowPage extends GetView<OnAirTVShowController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff27AE60),
         title: const Text('On Air TV Show'),
       ),
       body: Padding(

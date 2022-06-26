@@ -10,7 +10,7 @@ class HomePage extends GetView<HomePageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Mini Movie DB'), elevation: 0),
+      appBar: AppBar(title: const Text('Mini Movie DB'), backgroundColor: Color(0xff27AE60), elevation: 0),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
         child: Column(
@@ -41,7 +41,11 @@ class HomePage extends GetView<HomePageController> {
             const SizedBox(height: 12),
             SizedBox(
               width: double.infinity,
-              child: ElevatedButton(onPressed: () => Get.toNamed(Constant.watchList), child: Text('See My Watch List')),
+              child: ElevatedButton(
+                onPressed: () => Get.toNamed(Constant.watchList),
+                child: Text('See My Watch List'),
+                style: ElevatedButton.styleFrom(primary: Color(0xff27AE60)),
+              ),
             )
           ],
         ),
